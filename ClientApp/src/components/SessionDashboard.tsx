@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { create, getAll, remove, Session, update } from "../api/session";
 
-export default function Sessions(){
-    const [sessions, setSessions] = useState([] as Session[]);
+export default function SessionDashboard(){
+    const [sessions, setSessions] = useState<Session[]>([]);
 
     useEffect(() => {
         function getSessions(){

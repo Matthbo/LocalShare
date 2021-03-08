@@ -9,7 +9,12 @@ export function getAll(): Promise<Session[]>{
 }
 
 export function get(code: string): Promise<Session> {
-    return fetch(BASE_URL + `/session/${code}`).then(res => res.json());
+    return fetch(BASE_URL + `/session/${code}`).then(res => {
+        if(!res.ok)
+            throw res.status;
+
+        return res.json();
+    });
 }
 
 export function update(code: string, body: Session) {

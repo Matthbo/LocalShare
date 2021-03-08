@@ -2,8 +2,9 @@ import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import Sessions from './components/Sessions';
+import SessionDashboard from './components/SessionDashboard';
 import Navbar from './components/Navbar';
+import Session from './components/Session';
 
 function App() {
     return (
@@ -16,8 +17,11 @@ function App() {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/sessions">
-                    <Sessions />
+                <Route path="/session/:code?">
+                    <Session />
+                </Route>
+                <Route exact path="/session-dashboard">
+                    <SessionDashboard />
                 </Route>
             </Switch>
         </BrowserRouter>

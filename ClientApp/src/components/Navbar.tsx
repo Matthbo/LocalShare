@@ -9,7 +9,7 @@ export default function Navbar(){
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/sessions">Sessions</Link>
+                    <Link to="/session-dashboard">Session Dashboard</Link>
                 </li>
             </ul>
         </nav>
